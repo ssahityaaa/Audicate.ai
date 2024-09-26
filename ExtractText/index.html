@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Text Extraction</title>
+</head>
+<body>
+
+<h1>File Upload and Text Extraction</h1>
+
+<input type="file" id="fileInput" accept=".txt, .pdf,.docx" />
+<button onclick="uploadFile()">Upload and Extract</button>
+
+<p id="response"></p>
+
+<script>
+    function uploadFile() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+
+        if (file) {
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch('https://extracttext-66knrxk5ca-uc.a.run.app/extract_text', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const responseElement = document.getElementById('response');
+                responseElement.textContent = 'Extracted Text: ' + data.text;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const responseElement = document.getElementById('response');
+                responseElement.textContent = 'Error occurred during extraction.';
+            });
+        } else {
+            alert('Please select a file.');
+        }
+    }
+</script>
+
+</body>
+</html>

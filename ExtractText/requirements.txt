@@ -1,0 +1,13 @@
+Assignment 2
+Unit 3
+
+1. Explain (Block Diagram) MAC layer, its addressing, binary exponential backoff algorithm in detail with a suitable example.
+2. Explain distributed random access and contention schemes with a suitable example (Aloha and Slotted Aloha).
+3. Explain CSMA, collision-free, explain width map, brap count binary down, and MLMA contention protocol with a suitable example.
+4. Explain IEEE standards 802 series and performance-based metrics.
+
+Unit 4
+
+1. Explain in detail the network layer: a) Design issues, b) services, and needs.
+2. Explain in detail routing algorithms: 1. Least cost RA, 2. Dijkstra's algorithm, 3. Bellman-Ford, 4. Hierarchical routing, 5. Broadcast, 6. Multicast, 7. IP addresses.
+3. Packet forwarding, fragmentation and reassembling, defragmentation, ICMP, and the differences between IPv4 vs IPv6.
